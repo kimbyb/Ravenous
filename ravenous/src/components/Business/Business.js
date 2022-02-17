@@ -1,5 +1,5 @@
 import React from "react";
-import React, { Component } from "react";
+import "./Business.css";
 
 const business = {
   imageSrc: "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
@@ -13,7 +13,7 @@ const business = {
   reviewCount: 90,
 };
 
-class business extends Component {
+class Business extends React.Component {
   state = {};
   render() {
     return (
@@ -24,19 +24,19 @@ class business extends Component {
             alt=""
           />
         </div>
-        <h2>MarginOtto Pizzeria</h2>
+        <h2>{business.name}</h2>
         <div className="Business-information">
           <div className="Business-address">
-            <p>{this.business.address}</p>
-            <p>{this.business.city}</p>
+            <p>{business.address}</p>
+            <p>{business.city}</p>
             <p>
-              {this.business.state} {this.business.zipCode}
+              {business.state} {business.zipCode}
             </p>
           </div>
           <div className="Business-reviews">
-            <h3>{this.business.category}</h3>
-            <h3 className="rating">{this.business.rating}</h3>
-            <p>{this.business.reviewCount}</p>
+            <h3>{business.category}</h3>
+            <h3 className="rating">{business.rating}</h3>
+            <p>{business.reviewCount}</p>
           </div>
         </div>
       </div>
@@ -44,4 +44,4 @@ class business extends Component {
   }
 }
 
-export default business;
+export default Business;
